@@ -1,0 +1,9 @@
+html {
+    background: linear-gradient(to left, transparent, #304C89 120%),
+      url("./images/homeMain.jpg");
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  
