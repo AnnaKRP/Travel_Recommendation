@@ -28,7 +28,22 @@
 
         <div id="descriptionContainer">
             <h1 id="title">Contact Us</h1>
-            <p></p>
+
+            <div class="container">
+                <form action="mailto:annakarpiuk19.1994@gmail.com" name="contact_form">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" required placeholder="John"/>
+                    <br>
+                    <label for="email">Email</label>
+                    <input name="email" type="email" required placeholder="you@domain.com"/>
+                    <br>
+                    <label for="message">Message</label><br>
+                    <textarea name="message" cols="30" rows="8" placeholder="Enter your message here ..." required> </textarea>
+                    <div class="center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>	
+            </div>
         </div>
 
         <div id="socialIcons">

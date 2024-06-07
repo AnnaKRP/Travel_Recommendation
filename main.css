@@ -16,6 +16,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: #E8E5DA 3px solid;
   }
 
   #navLogo {
