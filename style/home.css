@@ -8,3 +8,37 @@ html {
       overflow: scroll;
   }
   
+ /* display search results */
+
+ #containerCards {
+    /* background-color: rgb(27, 42, 75); */
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 40%;
+ }
+
+  .card {
+    background-color: #E8E5DA;
+    color:#304C89;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.cardTitle {
+    font-size: 1.5em;
+    margin: 8px;
+    padding: 10px;
+}
+
+.cardImage {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.cardDescription {
+    font-size: 1em;
+    padding: 10px;
+}

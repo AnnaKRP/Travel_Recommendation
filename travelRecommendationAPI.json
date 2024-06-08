@@ -1,0 +1,70 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "name": "Ireland",
+            "imageUrl": "./images/ireland.jpg",
+            "description": "Ireland is a picturesque island nation known for its lush landscapes, rich cultural heritage, and friendly, hospitable people.",
+            "cities": [
+                {
+                    "name": "Dublin, Ireland",
+                    "imageUrl": "./images/dublin.jpg",
+                    "description": "Dublin is a vibrant city known for its rich history, lively pub scene, and as the cultural and political heart of Ireland."
+                },
+                {
+                    "name": "Cork, Ireland",
+                    "imageUrl": "./images/cork.jpg",
+                    "description": "Cork is a charming city in southern Ireland renowned for its vibrant arts scene, picturesque waterways, and rich maritime history."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Japan",
+            "imageUrl": "./images/japan.jpg",
+            "cities": [
+                {
+                    "name": "Tokyo, Japan",
+                    "imageUrl": "./images/tokyo.jpg",
+                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+                },
+                {
+                    "name": "Kyoto, Japan",
+                    "imageUrl": "./images/kyoto.jpg",
+                    "description": "Known for its historic temples, gardens, and traditional tea houses."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Brazil",
+            "imageUrl": "./images/brazil.jpg",
+            "cities": [
+                {
+                    "name": "Rio de Janeiro, Brazil",
+                    "imageUrl": "./images/rio.jpg",
+                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+                },
+                {
+                    "name": "São Paulo, Brazil",
+                    "imageUrl": "./images/saopaulo.jpg",
+                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+                }
+            ]
+        }
+    ],
+    "beaches": [
+        {
+            "id": 1,
+            "name": "Bora Bora, French Polynesia",
+            "imageUrl": "./images/bora.jpg",
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+        },
+        {
+            "id": 2,
+            "name": "Copacabana Beach, Brazil",
+            "imageUrl": "./images/copacabana.jpg",
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        }
+    ]
+}
