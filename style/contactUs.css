@@ -24,6 +24,7 @@ html {
     right: -8px;
     bottom: -8px;
     border: #E8E5DA 3px solid;
+    pointer-events: none;
   }
   
   label {
@@ -67,3 +68,57 @@ html {
   .center {
     text-align: center;
   }
+
+
+  /* Media Queries */
+
+/* Tablet view */
+@media (max-width: 900px) {
+  .container {
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+  }
+
+  label {
+      font-size: 16px;
+  }
+
+  #name, #email, textarea {
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 14px;
+  }
+
+  input[type=submit] {
+      padding: 10px 25px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  html {
+      background-size: cover;
+      background-attachment: scroll;
+  }
+
+  .container {
+      width: 95%;
+      margin: 5px auto;
+      padding: 8px;
+  }
+
+  label {
+      font-size: 14px;
+  }
+
+  #name, #email, textarea {
+      padding: 6px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+  }
+
+  input[type=submit] {
+      padding: 8px 20px;
+  }
+}

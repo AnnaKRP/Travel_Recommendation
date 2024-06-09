@@ -45,6 +45,11 @@ html {
     padding: 15px;
 }
 
+
+.timeweather {
+    display: flex;
+}
+
 .cardTime{
     padding: 5px;
     margin: 5px;
@@ -52,4 +57,95 @@ html {
     width: 50%;
     text-align: center;
     border-radius: 5px;
+}
+
+.cardWeather {
+    padding: 5px;
+    margin: 5px;
+    border: #E8E5DA 3px solid;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.noResult {
+    font-size: 26px;
+    text-align: center;
+    background-color: rgb(27, 42, 75);
+    padding: 7px;
+    border: #E8E5DA 3px solid;
+    border-radius: 5px;
+}
+
+
+/* Media Queries */
+
+/* Tablet view */
+@media (max-width: 900px) {
+    #containerCards {
+        top: 80px;
+        right: 50px;
+        width: 75%;
+    }
+
+    .cardTitle {
+        font-size: 1.3em;
+    }
+
+    .cardImage {
+        height: 250px;
+    }
+
+    .cardDescription {
+        font-size: 0.9em;
+    }
+
+    .cardTime,
+    .cardWeather {
+        width: 100%;
+        margin: 5px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    #containerCards {
+        position: static;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        margin-top: 100px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .cardTitle {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .cardImage {
+        height: 200px;
+    }
+
+    .cardDescription {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    .timeweather {
+        flex-direction: column;
+    }
+
+    .cardTime,
+    .cardWeather {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .noResult {
+        font-size: 20px;
+    }
 }
