@@ -8,6 +8,10 @@ html {
     overflow: scroll;
   }
 
+  .desc {
+    width: 60%;
+  }
+
 #teamIntro {
   display: flex;
   gap: 30px;
@@ -50,7 +54,6 @@ html {
   color: #E8E5DA;
   background-color: #304C89;
   border-radius: 10px;
-  /* width: auto; */
   margin: 5px;
   padding: 3px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

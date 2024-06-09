@@ -12,7 +12,18 @@ html {
     padding: 15px;
     margin: 15px;
     width: 60%;
-    border-top: #E8E5DA 3px solid;
+    background-color: rgb(27, 42, 75);
+    position:relative;
+  }
+
+  .container:after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: #E8E5DA 3px solid;
   }
   
   label {

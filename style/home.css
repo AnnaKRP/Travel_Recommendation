@@ -9,36 +9,47 @@ html {
   }
   
  /* display search results */
-
  #containerCards {
-    /* background-color: rgb(27, 42, 75); */
     position: absolute;
     top: 100px;
     right: 100px;
-    width: 40%;
+    width: 45%;
+    padding: 10px;
  }
 
   .card {
-    background-color: #E8E5DA;
-    color:#304C89;
+    background-color: rgb(27, 42, 75);
+    color:#E8E5DA;
     display: flex;
     flex-direction: column;
     margin: 15px;
+    border:solid 3px #E8E5DA;
+    border-radius: 5px;
 }
 
 .cardTitle {
     font-size: 1.5em;
     margin: 8px;
-    padding: 10px;
+    padding: 15px;
 }
 
 .cardImage {
     display: block;
     width: 100%;
     height: 300px;
+    object-fit: cover;
 }
 
 .cardDescription {
     font-size: 1em;
-    padding: 10px;
+    padding: 15px;
+}
+
+.cardTime{
+    padding: 5px;
+    margin: 5px;
+    border: #E8E5DA 3px solid;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
 }

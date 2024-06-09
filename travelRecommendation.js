@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Error fetching the JSON data:', error);
         });
 
-    // convert intup to lowercase and trim any spaces
+    // convert input to lowercase and trim any spaces
     const performSearch = () => {
         const query = conditionInput.value.trim().toLowerCase();
         if (query && jsonData) {
@@ -64,35 +64,47 @@ document.addEventListener("DOMContentLoaded", () => {
         return results;
     }
 
+    function getTimeByTimezone(timezone) {
+        const options = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric' };
+        return new Date().toLocaleTimeString('en-US', options);
+    }
+
     function displayResults(results) {
         const containerCards = document.createElement('div');
-        containerCards.setAttribute('id', 'containerCards'); // Set the id attribute
-    
+        containerCards.setAttribute('id', 'containerCards'); 
+
         if (results.length === 0) {
             containerCards.insertAdjacentHTML('beforeend', '<p>No results found.</p>');
         } else {
             results.forEach(result => {
                 const resultDiv = document.createElement('div');
                 resultDiv.classList.add('result', 'card');
+                
+                // check for timezone at the city level first, then at the country level
+                const timezone = result.timezone || (result.cities && result.cities[0] && result.cities[0].timezone) || 'N/A';
+                const time = timezone !== 'N/A' ? getTimeByTimezone(timezone) : 'N/A';
+
                 resultDiv.innerHTML = `
                     <img src="${result.imageUrl}" alt="${result.name}" class="cardImage">
                     <h2 class="cardTitle">${result.name}</h2>
                     <p class="cardDescription">${result.description}</p>
+                    <p class="cardTime">Current time: ${time}</p>
                 `;
-                // blur content
+
+                // blur content to ensure it's not distracting from the search result
                 descriptionContainer.innerHTML = `
-                    <h1 id="title" style="filter: blur(5px);">Explore <br/> dream <br/> destination</h1>
-                    <p class="desc" style="filter: blur(5px);">Welcome to your ultimate travel recommendation website! Whether you're a seasoned 
+                    <h1 id="title" style="filter: blur(3px);">Explore <br/> dream <br/> destination</h1>
+                    <p class="desc" style="filter: blur(3px);">Welcome to your ultimate travel recommendation website! Whether you're a seasoned 
                     globetrotter or planning your first adventure, we're here to help you discover the world's hidden gems, 
                     iconic landmarks, and unique cultural experiences. Embark on unforgettable journeys 
                     where every trip becomes an extraordinary adventure. Let's make your travel dreams come true!</p>
                 `;
+                
                 containerCards.appendChild(resultDiv);
             });
         }
-    
+
         // append containerCards to the descriptionContainer
         descriptionContainer.appendChild(containerCards);
     }
-    
 });
