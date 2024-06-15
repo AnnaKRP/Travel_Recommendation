@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => {
                 console.error('Error fetching weather:', error);
-                weatherElement.innerHTML = `Not available`;
+                weatherElement.innerHTML = `Temperature: not available`;
             });
     }
 });
